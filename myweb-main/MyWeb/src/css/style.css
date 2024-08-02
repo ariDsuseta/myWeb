@@ -1,0 +1,332 @@
+body {
+  height: 1000px;
+}
+.pos-a {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40%;
+}
+/* Util start */
+.button {
+  border: 1px solid;
+  padding: 10px;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: azure;
+  transition: 0.1s linear;
+}
+.button:hover {
+  -webkit-box-shadow: inset 0px 29px 29px 0px rgba(163, 163, 163, 0.4);
+  -moz-box-shadow: inset 0px 29px 29px 0px rgba(163, 163, 163, 0.4);
+  box-shadow: inset 0px 29px 29px 0px rgba(163, 163, 163, 0.4);
+}
+.button:active {
+  background: rgb(162, 24, 237);
+  background: linear-gradient(
+    18deg,
+    rgba(162, 24, 237, 1) 16%,
+    rgba(252, 0, 114, 1) 30%,
+    rgba(252, 0, 114, 0.5872724089635855) 67%
+  );
+  border-color: rgb(162, 24, 237);
+}
+/* Util End */
+
+/* max width 640px show mobile */
+/* header */
+.header {
+  height: 50vh;
+  background-image: url(../../document/bg/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(10, 10, 10, 0.8);
+  .content-header {
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    color: azure;
+    h4 {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 42px;
+      background: rgb(162, 24, 237);
+      background: linear-gradient(
+        18deg,
+        rgba(162, 24, 237, 1) 16%,
+        rgba(252, 0, 114, 1) 30%,
+        rgba(252, 0, 114, 0.5872724089635855) 67%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1;
+    }
+    p {
+      font-size: 14px;
+      line-height: 2;
+    }
+  }
+}
+.header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 53, 84, 0.8);
+}
+
+/* Header End */
+/* about Start*/
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.about .about-info {
+  width: 100%;
+  padding: 30px 20px;
+  h4 {
+    font-size: 26px;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 0.8;
+    color: hsl(0, 0%, 43%);
+  }
+  p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+.about .about-img {
+  width: 50%;
+  position: relative;
+}
+
+.about .about-img img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.about .progress {
+  margin: auto;
+  margin-bottom: 30px;
+  width: 50%;
+  .container-progress {
+    margin-bottom: 10px;
+    .progress-name {
+      text-transform: uppercase;
+      h6 {
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+    .container-bar {
+      flex: 1;
+      order: 1;
+      margin: auto;
+      margin-right: 5px;
+      .progress-bar {
+        width: 100%;
+        height: 6px;
+        background-color: rgba(252, 0, 114, 1);
+        border-radius: 6px;
+        .bar {
+          width: 0;
+          height: 100%;
+          background-color: rgba(162, 24, 237, 1);
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
+
+.my-info {
+  background-color: #dcdcde;
+  width: 100%;
+  order: 4;
+  padding: 20px 0;
+  box-shadow: 0 -2px 5px rgba(10, 10, 10, 0.26),
+    0 2px 5px rgba(10, 10, 10, 0.26);
+}
+
+.my-info .info-number,
+.my-info .info-address,
+.my-info .info-email {
+  padding-bottom: 10px;
+  text-align: center;
+  .icones {
+    color: rgba(162, 24, 237, 1);
+  }
+  .cards {
+    h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+}
+/* about End*/
+
+/* Service Start */
+.service .service-header {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(32, 36, 37, 0.5);
+  h2 {
+    font-size: 26px;
+    color: rgb(40, 41, 41);
+  }
+  p {
+    font-size: 12px;
+  }
+}
+.service .service-body {
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    width: 70%;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    transition: 0.2s linear;
+    background: rgb(162, 24, 237);
+    background: linear-gradient(
+      18deg,
+      rgba(162, 24, 237, 1) 16%,
+      rgba(252, 0, 114, 1) 60%
+    );
+    color: #dcdcde;
+
+    .card-header {
+      .icons-feather {
+        width: 20%;
+      }
+    }
+    .card-body h4 {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .card-body p {
+      font-size: 12px;
+    }
+    .card-body a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 20px;
+      border-radius: 5px;
+      color: azure;
+      background: rgba(255, 255, 255, 0.23);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5.4px);
+      -webkit-backdrop-filter: blur(5.4px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: transform 0.2s;
+    }
+    .card-body a:hover {
+      transform: scale(1.12);
+    }
+  }
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.61);
+    transform: scale(1.05);
+  }
+}
+/* Service End */
+
+/* responsive */
+@media (min-width: 640px) {
+  /* Util start */
+  .button:hover {
+    transform: scale(1.12);
+  }
+  .button:active {
+    transform: scale(1);
+  }
+  /* Util End */
+  /* Header Start */
+  .header {
+    height: 100vh;
+    .content-header {
+      h4 {
+        font-size: 24px;
+      }
+      h1 {
+        font-size: 62px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  /* Header End */
+  /* About start */
+  .about {
+    display: flex;
+  }
+  .about .about-info {
+    order: 2;
+    flex: 2;
+    margin: auto 10px;
+  }
+  .about .about-img {
+    order: 1;
+    flex: 1;
+    margin: auto;
+  }
+  .about .about-img img {
+    position: relative;
+    bottom: -6px;
+  }
+  .about .progress {
+    order: 3;
+    flex: 1;
+    margin: auto;
+  }
+  .about .progress .container-progress {
+    margin-bottom: 10px;
+  }
+  .my-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .my-info .info-number,
+  .my-info .info-address,
+  .my-info .info-email {
+    display: flex;
+    text-align: left;
+    .icones {
+      margin: auto 10px;
+      padding: 10px;
+    }
+  }
+  /* About End */
+  /* service start */
+  .service .service-body {
+    padding: 20px 30px;
+
+    .card {
+      width: 33.3%;
+      /* margin: 0 10px; */
+    }
+  }
+  /* service end */
+}
+
+/* custom */
